@@ -1,0 +1,9 @@
+services:
+  mongo:
+    image: mongo:5.0.0
+    ports:
+      - 27017:27017
+    volumes:
+      - 'mongoRestData:/data/db'
+volumes:
+  mongoRestData:

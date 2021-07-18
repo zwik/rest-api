@@ -1,0 +1,45 @@
+{
+  "name": "rest-api",
+  "version": "0.0.1",
+  "description": "A REST API",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "node dist/server.js",
+    "lint": "eslint src/**",
+    "build": "tsc"
+  },
+  "keywords": [
+    "REST",
+    "API",
+    "JWT"
+  ],
+  "author": {
+    "name": "Marcel van den Bosch",
+    "email": "m.v.d.bosch@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "eslint": "^7.31.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@types/compression": "^1.7.1",
+    "@types/cors": "^2.8.12",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^16.3.3",
+    "compression": "^1.7.4",
+    "consola": "^2.15.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.3"
+  }
+}
