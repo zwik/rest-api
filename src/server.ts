@@ -6,6 +6,8 @@ import mongoose from 'mongoose'
 
 import { MONGODB_URI } from './util/secrets'
 
+import { UserRoutes } from './routes/userRoutes'
+
 class Server {
   private app: express.Application
 
@@ -17,6 +19,7 @@ class Server {
 
     this.config()
     this.database()
+    this.routes()
   }
 
   private config (): void {
@@ -37,13 +40,11 @@ class Server {
     this.connection.on('disconnected', () => {
       consola.info('Mongo connection disconnected')
       consola.info('Trying to reconnect to Mongo...')
-      setTimeout(() => {
-        mongoose.connect(MONGODB_URI as string, {
+      setTimeout(async () => {
+        await mongoose.connect(MONGODB_URI as string, {
           keepAlive: true,
           socketTimeoutMS: 3000,
-          connectTimeoutMS: 3000,
-          useNewUrlParser: true,
-          useUnifiedTopology: true
+          connectTimeoutMS: 3000
         })
       }, 3000)
     })
@@ -56,9 +57,7 @@ class Server {
 
     const run = async () => {
       await mongoose.connect(MONGODB_URI as string, {
-        keepAlive: true,
-        useNewUrlParser: true,
-        useUnifiedTopology: true
+        keepAlive: true
       })
     }
     run().catch((error) => consola.error(error))
@@ -68,6 +67,10 @@ class Server {
     this.app.listen(this.app.get('port'), () => {
       consola.success(`API is running at http://localhost:${this.app.get('port')}`)
     })
+  }
+
+  private routes (): void {
+    this.app.use('/api/user', new UserRoutes().routes)
   }
 }
 
