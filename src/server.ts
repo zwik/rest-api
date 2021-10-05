@@ -70,7 +70,7 @@ class Server {
   }
 
   private routes (): void {
-    this.app.use('/api/user', new UserRoutes().routes)
+    this.app.use('/api/user', new UserRoutes().router)
   }
 }
 

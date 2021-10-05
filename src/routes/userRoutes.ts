@@ -2,8 +2,7 @@ import { Router } from 'express'
 import { UserController } from '../controllers/userController'
 
 export class UserRoutes {
-  private router: Router
-
+  public router: Router
   public userController: UserController = new UserController();
 
   constructor () {
