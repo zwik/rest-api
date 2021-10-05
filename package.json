@@ -1,7 +1,7 @@
 {
   "name": "rest-api",
   "version": "0.0.1",
-  "description": "A REST API",
+  "description": "A REST API using TypeScript",
   "main": "src/server.ts",
   "scripts": {
     "start": "node dist/server.js",
