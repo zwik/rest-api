@@ -5,6 +5,7 @@
   "main": "src/server.ts",
   "scripts": {
     "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
     "lint": "eslint src/**",
     "build": "tsc"
   },
@@ -26,6 +27,8 @@
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
+    "nodemon": "^2.0.13",
+    "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   },
   "dependencies": {
