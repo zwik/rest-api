@@ -48,7 +48,7 @@
     "consola": "^2.15.3",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
+    "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.2",
     "passport": "^0.5.0",
