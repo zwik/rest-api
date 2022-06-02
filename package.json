@@ -38,7 +38,7 @@
     "@types/express": "^4.17.13",
     "@types/jsonwebtoken": "^8.5.8",
     "@types/node": "^17.0.38",
-    "@types/passport": "^1.0.7",
+    "@types/passport": "^1.0.8",
     "@types/passport-jwt": "^3.0.6",
     "@types/passport-local": "^1.0.34",
     "bcrypt": "^5.0.1",
