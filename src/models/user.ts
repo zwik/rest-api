@@ -11,7 +11,7 @@ export const userSchema: Schema = new Schema({
   password: String
 })
 
-userSchema.pre<IUser>('save', function save (next) {
+userSchema.pre<IUser>('save', function (next) {
   const user = this
 
   bcrypt.genSalt(10, (err, salt) => {

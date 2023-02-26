@@ -27,8 +27,8 @@ passport.use(new JwtStrategy(
   {
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
     secretOrKey: JWT_SECRET
-  }, function (jwtToken, done) {
-    User.findOne({ username: jwtToken.username }, function (err: Error, user: any) {
+  }, (jwtToken, done) => {
+    User.findOne({ username: jwtToken.username }, (err: Error, user: any) => {
       if (err) return done(err, false)
       if (user) return done(undefined, user, jwtToken)
       else return done(undefined, false)
