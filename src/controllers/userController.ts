@@ -8,18 +8,25 @@ import { JWT_SECRET } from '../util/secrets'
 
 export class UserController {
   public async registerUser (req: Request, res: Response): Promise<void> {
-    const hashedPassword = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
+    if (!(req.body.username && req.body.password)) {
+      res.status(400).end('username and password must be provided')
+      return
+    }
 
-    await User.create({
-      username: req.body.username,
-      password: hashedPassword
-    })
+    try {
+      await User.create({
+        username: req.body.username,
+        password: bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
+      })
 
-    const token = jwt.sign({
-      username: req.body.username,
-      scope: req.body.scope
-    }, JWT_SECRET as string)
-    res.status(200).send({ token })
+      const token = jwt.sign({
+        username: req.body.username,
+        scope: req.body.scope
+      }, JWT_SECRET as string)
+      res.status(200).send({ token })
+    } catch (error) {
+      res.status(501).end('Failed to create user')
+    }
   }
 
   public authenticateUser (req: Request, res: Response, next: NextFunction) {
