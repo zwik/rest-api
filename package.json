@@ -1,7 +1,7 @@
 {
   "name": "rest-api",
   "version": "0.0.1",
-  "description": "A REST API using TypeScript",
+  "description": "A REST API using TypeScript and MongoDB",
   "main": "src/server.ts",
   "scripts": {
     "start": "node dist/server.js",
@@ -12,7 +12,10 @@
   "keywords": [
     "REST",
     "API",
-    "JWT"
+    "JWT",
+    "MongoDB",
+    "Mongoose",
+    "TypeScript"
   ],
   "author": {
     "name": "Marcel van den Bosch",
