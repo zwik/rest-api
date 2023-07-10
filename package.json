@@ -42,7 +42,7 @@
     "@types/jsonwebtoken": "^9.0.2",
     "@types/node": "^20.4.0",
     "@types/passport": "^1.0.12",
-    "@types/passport-jwt": "^3.0.8",
+    "@types/passport-jwt": "^3.0.9",
     "@types/passport-local": "^1.0.35",
     "bcrypt": "^5.1.0",
     "compression": "^1.7.4",
