@@ -37,7 +37,7 @@
   "dependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/compression": "^1.8.0",
-    "@types/cors": "^2.8.18",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.2",
     "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^22.15.30",
