@@ -45,7 +45,7 @@
     "@types/passport-jwt": "^4.0.1",
     "@types/passport-local": "^1.0.38",
     "bcrypt": "^6.0.0",
-    "compression": "^1.8.0",
+    "compression": "^1.8.1",
     "consola": "^3.4.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",
